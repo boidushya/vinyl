@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class GenerateQuestions(BaseModel):
     track_ids: list
     room_id: str
+    limit: int
 
 
 class FetchQuestions(BaseModel):
