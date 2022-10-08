@@ -19,7 +19,7 @@ def create_question(
     redis_client: Redis = Depends(deps.get_redis),
 ):
     qg = QuestionGenerator(db, request_body.track_ids)
-    questions = qg.generate(10)
+    questions = qg.generate(request_body.limit)
 
     for question in questions:
         track_id = question["question_id"]
