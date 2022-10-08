@@ -6,6 +6,14 @@ from crud.tracks_crud import query_handler
 
 class QuestionGenerator:
     def generate(self, limit: int):
+        """Generate a list of questions based on the tracks in the playlist.
+
+        Args:
+            limit (int): The number of questions to generate.
+
+        Returns:
+            questions (list): A list of questions.
+        """
         limit = min(len(self.__tracks), limit)
         # self.__tracks = self.__tracks[:limit]
 
